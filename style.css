@@ -1,0 +1,1068 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+html{
+background-color: snow;
+word-wrap: break-word;
+}
+
+
+                                                                /* DESKTOP */
+
+
+body{
+    grid-template-columns: auto auto auto auto auto auto;
+    display: grid;
+    border-right: 3px solid darkgrey;
+    border-left: 3px solid darkgrey;
+}
+
+
+                                                                    /* HEADER */
+
+
+header{
+    grid-column: 1/7;
+    grid-row: 1/2;
+    background-image: url(../Booktrader/books-wide-sm.jpg);
+    background-repeat: round;
+    font-family: 'Lucida Calligraphy', 'Verdana', sans-serif;
+    height: 230px;
+    margin-top: 0;
+   
+}
+
+header h1{
+    background-color: rgba(95, 97, 101, 0.51);
+    height: 70px;
+    width: 300px;
+    text-align: left;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    margin-left: 250px;
+    color: rgb(248, 251, 251);
+    border-radius: 5%;
+}
+
+header h4{
+    margin-top: 0;
+    margin-left: 320px;
+    width: 400px;
+    background-color: rgba(95, 97, 101, 0.51);
+    text-align: left;
+    border-radius: 20%;
+    color: rgb(248, 251, 251);
+}
+
+                                                            /* SÖKFÄLT */
+
+
+    #search{
+        font-size: 1em;
+        font-family: monospace;
+        background-color: rgba(95, 97, 101, 0.51);
+        text-align: left;
+        margin-left: 5px;
+        padding: 10px;
+        float: left;
+        position: absolute;
+        top: 15%;
+        color: snow;
+        border-radius: 5%;
+    }
+#search input{
+    background-color: black;
+}
+    #search span{
+        font-family: monospace;
+        color: snow;
+    }
+
+                                                             /* KUNDVAGN */
+
+#basket{
+    margin-right: 15px;
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    font-family: monospace;
+    font-size: 0.8em;
+    width: 110px;
+    height: 60px;
+    background-color: snow;
+    float: right;
+    border: 1px solid brown;
+    z-index: 5;
+}
+#basket-contents{
+    background-color: snow;
+    color: black;
+    font-family: monospace;
+    position: relative;
+    border: 2px solid sienna;
+    top: 10px;
+    width: inherit;
+}
+#content-items{
+    list-style-position: outside;
+    color: darkslategrey;
+    font-family: monospace;
+    position: relative;
+    border: 2px solid sienna;
+    list-style-type: decimal;
+    background-color: snow;
+    width: inherit;
+}
+#content-items li{
+    font-weight: bolder;
+}
+.open{
+    display: block;
+    transition: 0.6s;
+    width: 200px;
+    height: 170px;
+    position: relative;
+    right: 100px;
+}
+
+.basket-items {
+    color: black;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%
+  }
+#sum{
+    font-family: monospace;
+    margin-bottom: 10px;
+    color: rgb(55, 175, 55);
+    font-size: 1.3em;
+}
+
+#checkout{
+    width: 100%;
+    background-color: snow;
+    color: black;
+    font-family: monospace;
+    font-size: 1.2em;
+    background-image: none;
+    border: 2px solid sienna;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    margin-left: 45%;
+}
+#done:hover{
+    background-color: black;
+    color: snow;
+    text-decoration-line: underline;
+}
+#sell{
+    width: 100%;
+    background-color: snow;
+    color: black;
+    font-family: monospace;
+    font-size: 1.2em;
+    background-image: none;
+    border: 2px solid sienna;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    margin-left: 45%;
+}
+#sellist{
+    display: block;
+}
+#salescontent{
+    display: block;
+}
+                                                                                /* MAIN */
+
+
+main{
+    grid-column: 1/7;
+    grid-row: 3/12;
+    margin-top: 10px;
+
+}
+main h3{
+    font-family: monospace;
+}
+#popular{
+    margin-left: 30px;
+    text-align: center;
+}
+
+#titles-container>div{
+    float: left;
+    width: 180px;
+    height: 250px;
+    background-color: rgb(155, 189, 189);
+    margin: 10px 20px 75px 10px;
+    text-align: center;
+    box-shadow: 2px 2px 8px black;
+}
+
+#titles-container p{
+    font-family: monospace;
+    position: relative;
+    top: 240px;
+    text-align: left;
+}
+
+                                                                            /* BÖCKER */
+
+#title1{
+    background-image: url(../Booktrader/harry-potter-book-covers-illustration-olly-moss-3.jpg);
+    background-repeat: round;
+}
+
+#title2{
+    background-image: url(../Booktrader/carlsagan.jpg);
+    background-repeat: round;
+}
+#title3{
+    background-image: url(../Booktrader/hanteringen-av-ododa.jpg);
+    background-repeat: round;
+}
+#title4{
+    background-image: url(../Booktrader/cookbook.jpg);
+    background-repeat: round;
+}
+#title5{
+    background-image: url(../Booktrader/i-robot.jpg);
+    background-repeat: round;
+}
+#title6{
+    background-image: url(../Booktrader/jack-reacher.jpg);
+    background-repeat: round;
+}
+#title7{
+    background-image: url(../Booktrader/hedi.jpg);
+    background-repeat: round;
+}
+#title8{
+    background-image: url(../Booktrader/vietnam.jpg);
+    background-repeat: round;
+}
+#title9{
+    background-image: url(../Booktrader/obama.jpg);
+    background-repeat: round;
+}
+#title10{
+    background-image: url(../Booktrader/lionheart.jpg);
+    background-repeat: round;
+}
+#title11{
+    background-image: url(../Booktrader/lar-dig-skriva-bokstaver-och-ord.jpg);
+    background-repeat: round;
+}
+#title12{
+    background-image: url(../Booktrader/the-art-of-fantasy-sci-fi-and-steampunk.jpg);
+    background-repeat: round;
+}
+
+
+                                                                                /* OVERLAYS */
+
+    #title1-overlay,#title2-overlay,#title3-overlay,#title4-overlay, #title5-overlay, #title6-overlay,#title7-overlay, #title8-overlay,#title9-overlay,#title10-overlay,#title11-overlay,#title12-overlay{
+        position: fixed;
+        display: hidden;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+    }
+    #title1-text,#title2-text,#title3-text,#title4-text,#title5-text,#title6-text,#title7-text,#title8-text,#title9-text,#title10-text,#title11-text,#title12-text{
+        color: snow;
+        font-family: monospace;
+        font-size: 1.2em;
+        position: absolute;
+        top: 25%;
+        width: 52%;
+        text-align: left;
+        left: 40%;
+    }
+    #title1-overlay img, #title2-overlay img, #title3-overlay img, #title4-overlay img, #title5-overlay img, #title6-overlay img, #title7-overlay img, #title8-overlay img, #title9-overlay img, #title10-overlay img, #title11-overlay img, #title12-overlay img{
+        position: absolute;
+        left: 120px;
+        top: 5%;
+        width: 25%;
+        outline: 5px solid white;
+}
+.overlay-close{
+    width: 20px;
+    padding: 5px;
+    font-weight: lighter;
+    border: 3px solid snow;
+    font-size: 1.2em;
+    color: white;
+    position: relative;
+    top: 20%;
+    left: 25%;
+    cursor: pointer;
+}
+.overlay-close:hover{
+    background-color: lightgrey;
+    color: black;
+}
+
+
+                                                                            /* BOKPRISER */
+
+.bookprice{
+    font-size: 1.2em;
+    font-family: monospace;
+    color: red;
+    margin-left: 5px;
+}
+.price{
+    font-family: monospace;
+    font-size: 1em;
+    background-color: sienna;
+    font-weight: bolder;
+    color: snow;
+    margin-top: 2px;
+    cursor: pointer;
+}
+#title1-price,#title2-price,#title3-price,#title4-price, #title5-price, #title6-price,#title7-price, #title8-price,#title9-price,#title10-price,#title11-price,#title12-price{
+    margin-left: 5px;
+    color: red;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.infobuttons{
+    background-color: coral;
+    color: snow;
+    font-family: monospace;
+    outline: 1px solid black;
+    margin: 2px;
+}
+
+                                                                                /* FOOTER */
+
+
+footer{
+    background-color: coral;
+    grid-column: 1/7;
+    grid-row: 13/13;
+    margin-top: 10px;
+    outline: 1px solid darkslategray;
+}
+footer p{
+    text-align: center;
+    font-size: 1.5em;
+    color: snow;
+}
+
+
+                                                                    /* ...................... */
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+                            /* MOBIL */
+
+@media(max-width: 768px){
+    *{
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+    }
+    html{
+    background-color: snow;
+    word-wrap: break-word;
+    }
+    
+    
+    
+    
+    
+    body{
+        grid-template-columns: auto auto auto auto auto auto;
+        display: grid;
+        border-right: 3px solid darkgrey;
+        border-left: 3px solid darkgrey;
+    
+    }
+    
+    
+                                                                        /* HEADER */
+    
+    
+    header{
+        grid-column: 1/6;
+        background-image: url(../Booktrader/books-wide-sm.jpg);
+        background-repeat: round;
+        font-family: 'Lucida Calligraphy', 'Verdana', sans-serif;
+        height: 230px;
+        margin-top: 0;
+       
+    }
+    header h1{
+    background-color: rgba(95, 97, 101, 0.51);
+    height: 70px;
+    
+    text-align: left;
+    font-size: 3.5em;
+    margin-right: 67px;
+    margin-left: 23%;
+    color: rgb(248, 251, 251);
+    border-radius: 5%;
+    }
+    
+    header h4{
+        margin-top: 0;
+        margin-left: 320px;
+        width: 400px;
+        background-color: rgba(95, 97, 101, 0.51);
+        text-align: left;
+        border-radius: 20%;
+        color: rgb(248, 251, 251);
+    }
+    
+                                                                /* SÖKFÄLT */
+    
+    
+        #search{
+            font-size: 1em;
+            font-family: monospace;
+            background-color: rgba(95, 97, 101, 0.51);
+            text-align: left;
+            margin-left: 5px;
+            padding: 10px;
+            position: absolute;
+            top: 15%;
+            color: snow;
+            border-radius: 5%;
+        }
+    #search input{
+        background-color: black;
+    }
+        #search span{
+            font-family: monospace;
+            color: snow;
+        }
+    
+                                                                 /* KUNDVAGN */
+    
+    #basket{
+        margin-right: 15px;
+        position: fixed;
+        top: 30%;
+        right: 40px;
+        font-family: monospace;
+        font-size: 0.8em;
+        width: 110px;
+        height: 60px;
+        background-color: snow;
+        float: right;
+        border: 1px solid brown;
+        z-index: 5;
+    }
+    #basket-contents{
+        background-color: snow;
+        color: black;
+        font-family: monospace;
+        position: relative;
+        border: 2px solid sienna;
+        top: 10px;
+        width: inherit;
+    }
+    #content-items{
+        list-style-position: outside;
+        color: darkslategrey;
+        font-family: monospace;
+        position: relative;
+        border: 2px solid sienna;
+        list-style-type: decimal;
+        background-color: snow;
+        width: inherit;
+    }
+    #content-items li{
+        font-weight: bolder;
+    }
+    .open{
+        display: block;
+        transition: 0.6s;
+        width: 200px;
+        height: 170px;
+        position: relative;
+        right: 100px;
+    }
+    
+    .basket-items {
+        color: black;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%
+      }
+    #sum{
+        font-family: monospace;
+        margin-bottom: 10px;
+        color: tomato;
+        font-size: 1.3em;
+    }
+
+    
+    
+                                                                                    /* MAIN */
+    
+    
+    main{
+        grid-column: 1/5;
+        grid-row: 3/12;
+        margin-top: 10px;
+    
+    }
+    main h3{
+        font-family: monospace;
+    }
+    #popular{
+        margin-left: 30px;
+        text-align: center;
+    }
+    
+    #titles-container>div{
+        float: left;
+        width: 180px;
+        height: 250px;
+        background-color: rgb(155, 189, 189);
+        margin: 10px 10px 75px 10px;
+        text-align: center;
+        box-shadow: 2px 2px 8px black;
+    }
+    
+    #titles-container p{
+        font-family: monospace;
+        position: relative;
+        top: 240px;
+        text-align: left;
+    }
+    
+                                                                                /* BÖCKER */
+    
+    #title1{
+        background-image: url(../Booktrader/harry-potter-book-covers-illustration-olly-moss-3.jpg);
+        background-repeat: round;
+    }
+    
+    #title2{
+        background-image: url(../Booktrader/carlsagan.jpg);
+        background-repeat: round;
+    }
+    #title3{
+        background-image: url(../Booktrader/hanteringen-av-ododa.jpg);
+        background-repeat: round;
+    }
+    #title4{
+        background-image: url(../Booktrader/cookbook.jpg);
+        background-repeat: round;
+    }
+    #title5{
+        background-image: url(../Booktrader/i-robot.jpg);
+        background-repeat: round;
+    }
+    #title6{
+        background-image: url(../Booktrader/jack-reacher.jpg);
+        background-repeat: round;
+    }
+    #title7{
+        background-image: url(../Booktrader/hedi.jpg);
+        background-repeat: round;
+    }
+    #title8{
+        background-image: url(../Booktrader/vietnam.jpg);
+        background-repeat: round;
+    }
+    #title9{
+        background-image: url(../Booktrader/obama.jpg);
+        background-repeat: round;
+    }
+    #title10{
+        background-image: url(../Booktrader/lionheart.jpg);
+        background-repeat: round;
+    }
+    #title11{
+        background-image: url(../Booktrader/lar-dig-skriva-bokstaver-och-ord.jpg);
+        background-repeat: round;
+    }
+    #title12{
+        background-image: url(../Booktrader/the-art-of-fantasy-sci-fi-and-steampunk.jpg);
+        background-repeat: round;
+    }
+    
+    
+                                                                                    /* OVERLAYS */
+    
+        #title1-overlay,#title2-overlay,#title3-overlay,#title4-overlay, #title5-overlay, #title6-overlay,#title7-overlay, #title8-overlay,#title9-overlay,#title10-overlay,#title11-overlay,#title12-overlay{
+            position: fixed;
+            display: hidden;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+        #title1-text,#title2-text,#title3-text,#title4-text,#title5-text,#title6-text,#title7-text,#title8-text,#title9-text,#title10-text,#title11-text,#title12-text{
+            color: snow;
+            font-family: monospace;
+            font-size: 1.2em;
+            position: absolute;
+            top: 25%;
+            width: 52%;
+            text-align: left;
+            left: 40%;
+        }
+        #title1-overlay img, #title2-overlay img, #title3-overlay img, #title4-overlay img, #title5-overlay img, #title6-overlay img, #title7-overlay img, #title8-overlay img, #title9-overlay img, #title10-overlay img, #title11-overlay img, #title12-overlay img{
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            width: 25%;
+            outline: 5px solid white;
+    }
+    .overlay-close{
+        width: 20px;
+        padding: 5px;
+        font-weight: lighter;
+        border: 3px solid snow;
+        font-size: 1.2em;
+        color: white;
+        position: relative;
+        top: 20%;
+        left: 30%;
+        cursor: pointer;
+    }
+    .overlay-close:hover{
+        background-color: lightgrey;
+        color: black;
+    }
+    
+    
+                                                                                /* BOKPRISER */
+    
+    .bookprice{
+        font-size: 1.2em;
+        font-family: monospace;
+        color: red;
+        margin-left: 5px;
+    }
+    .price{
+        font-family: monospace;
+        font-size: 1em;
+        background-color: sienna;
+        font-weight: bolder;
+        color: snow;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+    #title1-price,#title2-price,#title3-price,#title4-price, #title5-price, #title6-price,#title7-price, #title8-price,#title9-price,#title10-price,#title11-price,#title12-price{
+        margin-left: 5px;
+        color: red;
+        font-size: 1.2em;
+        font-weight: bolder;
+    }
+    .infobuttons{
+        background-color: coral;
+        color: snow;
+        font-family: monospace;
+        outline: 1px solid black;
+        margin: 2px;
+    }
+    
+                                                                                    /* FOOTER */
+    
+    
+    footer{
+        background-color: coral;
+        grid-column: 1/6;
+        grid-row: 13/13;
+        margin-top: 10px;
+        outline: 1px solid darkslategray;
+    }
+    footer p{
+        text-align: center;
+        font-size: 1.5em;
+        color: snow;
+    }
+    
+    
+                                                                        /* ...................... */
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+}
+
+
+@media(max-width: 600px){
+    *{
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+    }
+    html{
+    background-color: snow;
+    word-wrap: break-word;
+    }
+    
+    
+    
+    
+    
+    body{
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        display: grid;
+        border-right: 3px solid darkgrey;
+        border-left: 3px solid darkgrey;
+    }
+    
+    
+                                                                        /* HEADER */
+    
+    
+    header{
+        grid-column: 1/2;
+        background-image: url(../Booktrader/books-wide-sm.jpg);
+        background-repeat: round;
+        font-family: 'Lucida Calligraphy', 'Verdana', sans-serif;
+        height: 230px;
+        margin-top: 0;
+       
+    }
+    header h1{
+        background-color: rgba(95, 97, 101, 0.51);
+        height: 70px;
+        text-align: left;
+        font-size: 2.5em;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+        color: rgb(248, 251, 251);
+        border-radius: 5%;
+    }
+    
+    header h4{
+        margin-top: 5px;
+        margin-left: 0;
+        background-color: rgba(95, 97, 101, 0.51);
+        text-align: left;
+        border-radius: 20%;
+        color: rgb(248, 251, 251);
+    }
+    
+                                                                /* SÖKFÄLT */
+    
+    
+        #search{
+            font-size: 1em;
+            font-family: monospace;
+            background-color: rgba(95, 97, 101, 0.51);
+            text-align: left;
+            margin-left: 5px;
+            padding: 10px;
+            /* float: left; */
+            position: absolute;
+            top: 20%;
+            color: snow;
+            border-radius: 5%;
+        }
+    #search input{
+        background-color: black;
+    }
+        #search span{
+            font-family: monospace;
+            color: snow;
+        }
+    
+                                                                 /* KUNDVAGN */
+    
+    #basket{
+        margin-right: 15px;
+        position: fixed;
+        top: 25px;
+        right: 40px;
+        font-family: monospace;
+        font-size: 0.8em;
+        width: 110px;
+        height: 60px;
+        background-color: snow;
+        float: right;
+        border: 1px solid brown;
+        z-index: 5;
+    }
+    #basket-contents{
+        background-color: snow;
+        color: black;
+        font-family: monospace;
+        position: relative;
+        border: 2px solid sienna;
+        top: 10px;
+        width: inherit;
+    }
+    #content-items{
+        list-style-position: outside;
+        color: darkslategrey;
+        font-family: monospace;
+        position: relative;
+        border: 2px solid sienna;
+        list-style-type: decimal;
+        background-color: snow;
+        width: inherit;
+    }
+    #content-items li{
+        font-weight: bolder;
+    }
+    .open{
+        display: block;
+        transition: 0.6s;
+        width: 200px;
+        height: 170px;
+        position: relative;
+        right: 100px;
+    }
+    
+    .basket-items {
+        color: black;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%
+      }
+    #sum{
+        font-family: monospace;
+        margin-bottom: 10px;
+        color: tomato;
+        font-size: 1.3em;
+    }
+
+    #checkout{
+        margin: 5px;
+        grid-column: 1/1;
+        background-color: snow;
+        color: black;
+        font-family: monospace;
+        font-size: 1em;
+        border: 2px solid sienna;
+        text-align:left;
+    }
+    
+    #sell{
+        margin: 5px;
+        grid-column: 1/1;
+        background-color: snow;
+        color: black;
+        font-family: monospace;
+        font-size: 1em;
+        border: 2px solid sienna;
+        text-align:left;
+    }
+                                                                                    /* MAIN */
+    
+    
+    main{
+        grid-column: 1/2;
+        grid-row: 3/12;
+        margin-top: 10px;
+    
+    }
+    main h3{
+        font-family: monospace;
+        font-size: 2.5em;
+        text-align: left;
+        margin-bottom: 0;
+    
+    }
+    #popular{
+        margin-left: 30px;
+        text-align: center;
+    }
+    
+    #titles-container>div{
+        float: left;
+        width: 140px;
+        height: 220px;
+        background-color: rgb(155, 189, 189);
+        margin: 70px 10px 65px 9px;
+        text-align: center;
+        box-shadow: 2px 2px 8px black;
+    }
+    
+    #titles-container p{
+        font-family: monospace;
+        position: relative;
+        top: 240px;
+        text-align: left;
+    }
+    
+                                                                                /* BÖCKER */
+    
+    #title1{
+        background-image: url(../Booktrader/harry-potter-book-covers-illustration-olly-moss-3.jpg);
+        background-repeat: round;
+    }
+    
+    #title2{
+        background-image: url(../Booktrader/carlsagan.jpg);
+        background-repeat: round;
+    }
+    #title3{
+        background-image: url(../Booktrader/hanteringen-av-ododa.jpg);
+        background-repeat: round;
+    }
+    #title4{
+        background-image: url(../Booktrader/cookbook.jpg);
+        background-repeat: round;
+    }
+    #title5{
+        background-image: url(../Booktrader/i-robot.jpg);
+        background-repeat: round;
+    }
+    #title6{
+        background-image: url(../Booktrader/jack-reacher.jpg);
+        background-repeat: round;
+    }
+    #title7{
+        background-image: url(../Booktrader/hedi.jpg);
+        background-repeat: round;
+    }
+    #title8{
+        background-image: url(../Booktrader/vietnam.jpg);
+        background-repeat: round;
+    }
+    #title9{
+        background-image: url(../Booktrader/obama.jpg);
+        background-repeat: round;
+    }
+    #title10{
+        background-image: url(../Booktrader/lionheart.jpg);
+        background-repeat: round;
+    }
+    #title11{
+        background-image: url(../Booktrader/lar-dig-skriva-bokstaver-och-ord.jpg);
+        background-repeat: round;
+    }
+    #title12{
+        background-image: url(../Booktrader/the-art-of-fantasy-sci-fi-and-steampunk.jpg);
+        background-repeat: round;
+    }
+    
+    
+                                                                                    /* OVERLAYS */
+    
+        #title1-overlay,#title2-overlay,#title3-overlay,#title4-overlay, #title5-overlay, #title6-overlay,#title7-overlay, #title8-overlay,#title9-overlay,#title10-overlay,#title11-overlay,#title12-overlay{
+            position: fixed;
+            display: hidden;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+        #title1-text,#title2-text,#title3-text,#title4-text,#title5-text,#title6-text,#title7-text,#title8-text,#title9-text,#title10-text,#title11-text,#title12-text{
+            color: snow;
+            font-family: monospace;
+            font-size: 1.2em;
+            position: absolute;
+            top: 25%;
+            width: 52%;
+            text-align: left;
+            left: 40%;
+        }
+        #title1-overlay img, #title2-overlay img, #title3-overlay img, #title4-overlay img, #title5-overlay img, #title6-overlay img, #title7-overlay img, #title8-overlay img, #title9-overlay img, #title10-overlay img, #title11-overlay img, #title12-overlay img{
+            position: absolute;
+            left: 10%;
+            top: 15%;
+            width: 25%;
+            outline: 5px solid white;
+    }
+    .overlay-close{
+        width: 20px;
+        padding: 5px;
+        font-weight: lighter;
+        border: 3px solid snow;
+        font-size: 1.2em;
+        color: white;
+        position: relative;
+        top: 20%;
+        left: 30%;
+        cursor: pointer;
+    }
+    .overlay-close:hover{
+        background-color: lightgrey;
+        color: black;
+    }
+    
+    
+                                                                                /* BOKPRISER */
+    
+    .bookprice{
+        font-size: 1.2em;
+        font-family: monospace;
+        color: red;
+        margin-left: 5px;
+    }
+    .price{
+        font-family: monospace;
+        font-size: 1em;
+        background-color: sienna;
+        font-weight: bolder;
+        color: snow;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+    #title1-price,#title2-price,#title3-price,#title4-price, #title5-price, #title6-price,#title7-price, #title8-price,#title9-price,#title10-price,#title11-price,#title12-price{
+        margin-left: 5px;
+        color: red;
+        font-size: 1.2em;
+        font-weight: bolder;
+    }
+    .infobuttons{
+        background-color: coral;
+        color: snow;
+        font-family: monospace;
+        outline: 1px solid black;
+        margin: 2px;
+    }
+    
+                                                                                    /* FOOTER */
+    
+    
+    footer{
+        background-color: coral;
+        grid-column: 1/2;
+        grid-row: 13/13;
+        margin-top: 10px;
+        outline: 1px solid darkslategray;
+    }
+    footer p{
+        text-align: center;
+        font-size: 1.5em;
+        color: snow;
+    }
+    
+    
+                                                                        /* ...................... */
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+}

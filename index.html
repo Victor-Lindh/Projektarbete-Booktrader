@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Trader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div id="checkout" class="hide">
+        <p id ="order">Din beställning består av:</p>
+        <p>Fyll i formuläret nedan för att slutföra ditt köp.</p><br>
+    
+        <form action="" method="post">
+            Namn:<br><input type="text" name="" id=""><br>
+            Adress:<br><input type="text" name="" id=""><br>
+            Mailadress:<br><input type="email" name="" id=""><br>
+    
+        </form>
+    </div>
+
+<div id="sell">
+    <p>Har du böcker att sälja?<br>Fyll i formuläret nedan!</p>
+    <form action="" method="post">
+    Säljare:<br><input type="text" name="" id="sellperson" placeholder="Namn"><br>
+    Mail:<br><input type="email" name="" id="sellcontact" placeholder="Mail"><br>
+    Boktitel:<br><input type="text" name="" id="selltitle" placeholder="Titel, författare, år"><br>
+    Pris:<br><input type="text" name="" id="sellprice" placeholder="Bokens pris"><br>
+    <button id="sellBtn" type="button">Sälj bok!</button>
+</form>
+<p id="salescontent"></p>
+<ul id="sellist"></ul>
+</div>
+
+    <header>
+        <h1>Book Trader</h1><h4>Köp och sälj begagnade böcker här!</h4>
+
+
+                                            <!-- SÖKFÄLT -->
+        <div id="search">
+            <span>Sök efter kategori: </span><br>
+
+                <input type="checkbox" value="Fantasy" id="opt-fantasy">Fantasy
+                <input type="checkbox" value="Scifi" id="opt-scifi">Sci-fi
+                <input type="checkbox" value="Barn" id="opt-kids">Barn&Ungdom<br>
+                <input type="checkbox" value="Deckare" id="opt-mystery">Deckare
+                <input type="checkbox" value="Mat" id="opt-food">Matlagning
+                <input type="checkbox" value="Fakta" id="opt-facts">Samhälle&Fakta
+            
+        </div>
+
+                                            <!-- VARUKORG -->
+                                            
+    <div id="basket">
+            <span id="done">Gå till kassan:</span>
+
+            <span><strong>Varukorg</strong></span><br>
+            <span id="items">Varukorgen är tom<br>Totalsumma:</span><br>
+            <span id="sum"></span>
+        
+            <p id="basket-contents"><strong>Klicka för att se innehåll &#8628;</strong></p>
+            <ul id="content-items" class="hide">
+
+            </ul>
+        </div>
+            
+        
+    </header>
+    
+    <main>
+        
+    <div id="popular">
+        <h3>De mest populära titlarna just nu</h3>
+    
+
+                                                                            <!-- OVERLAYS -->
+
+        <div id="title1-overlay" class="hide">
+            <span class="overlay-close" id="closeharry">X</span>
+            <div id="title1-text"><h2>Harry Potter and the Philosopher's Stone<br></h2><h3>JK Rowling</h3><p>Föräldralöse Harry Potter bor hos sina elaka styvföräldrar och deras vidrige son. En helt ny värld öppnar sig för Harry när det visar sig att han egentligen är en trollkarl och börjar Hogwarts Skola för Häxkonster och Trolldom, en värld full av magi och spännande äventyr!</p><br><input type="number" min="1" max="100" id="book1-quant" value="1"><span id = "title1-price"></span><br><button class="price" id="buyharry">Lägg i varukorgen</button></div><img src="../Booktrader/harry-potter-book-covers-illustration-olly-moss-3.jpg" alt="">
+    </div>
+        <div id="title2-overlay" class="hide">
+                <span class="overlay-close" id="closecarl">X</span>
+            <div id="title2-text"><h2>Cosmos</h2><h3>Carl Sagan</h3><p>Cosmos är en av de mest sålda böckerna inom vetenskap. I klarsynt text avslöjar Carl Sagan en fantastisk blå värld som befolkas av en livsform som precis börjat ana sin egen identitet och potential, en livsform som nu är på god väg att ta sina första steg ut i det oändliga universum.</p><br><input type="number" min="1" max="100" id="book2-quant" value="1"><span id = "title2-price"></span><br><br><button class="price" id="buycarl">Lägg i varukorgen</button></div><img src="../Booktrader/carlsagan.jpg" alt="">
+    </div>
+        <div id="title3-overlay" class="hide">
+            <span class="overlay-close" id="closejohn">X</span>
+            <div id="title3-text"><h2>Hanteringen av Odöda</h2><h3>John Ajvide Lindqvist</h3><p>Stockholm en dag i mitten av augusti: Det är onaturligt varmt fast det är sent på kvällen och överallt klagar människor på huvudvärk. Det känns som om ett elektriskt fält lagt sig över stan. Ett omvänt strömavbrott. Inga lampor kan släckas, inga maskiner stängas av. Paniken ligger i luften. Så plötsligt är allt över. Ingenting har hänt...</p><br><input type="number" min="1" max="100" id="book3-quant" value="1"><span id = "title3-price"></span><br><button class="price" id="buyododa">Lägg i varukorgen</button></div><img src="../Booktrader/hanteringen-av-ododa.jpg" alt="">
+    </div>
+        <div id="title4-overlay" class="hide">
+                <span class="overlay-close" id="closeamanda">X</span>
+            <div id="title4-text"><h2>Italian Cuisine Cookbook</h2><h3>Amanda Aldini</h3><p>Italiensk matlagning när den är som bäst! Hundratals spännande recept från Amanda Aldinis italienska kök.</p><br><input type="number" min="1" max="100" id="book4-quant" value="1"><span id = "title4-price"></span><br><button class="price" id="buyamanda">Lägg i varukorgen</button></div><img src="../Booktrader/cookbook.jpg" alt="">
+    </div>
+        <div id="title5-overlay" class="hide">
+                <span class="overlay-close" id="closeisaac">X</span>
+            <div id="title5-text"><h2>I, Robot</h2><h3>Isaac Asimov</h3><p>"In this collection, one of the great classics of science fiction, Asimov set out the principles of robot behavior that we know as the Three Laws of Robotics. Here are stories of robots gone mad, mind-reading robots, robots with a sense of humor, robot politicians, and robots who secretly run the world, all told with Asimov's trademark dramatic blend of science fact and science fiction."</p><br><input type="number" min="1" max="100" id="book5-quant" value="1"><span id = "title5-price"></span><br><button class="price" id="buyrobot">Lägg i varukorgen</button></div><img src="../Booktrader/i-robot.jpg" alt="">
+    </div>
+        <div id="title6-overlay" class="hide">
+                <span class="overlay-close" id="closelee">X</span>
+            <div id="title6-text"><h2>Berättelser om Jack Reacher</h2><h3>Lee Child</h3><p>Tolv spännande historier i en adrenalinfylld samling.<br>
+                    Vi börjar i en håla i Maine, där Reacher blir vittne till en väskstöld men ser mycket mer än ett enkelt brott. I en annan av berättelserna tas läsaren tillbaka till 1989, när Reacher har fått uppdraget att lösa mordet på på en ung polis som hittats vid en isolerad skogsväg i Georgia, och vars mördare kanske gömmer sig helt öppet.</p><br><input type="number" min="1" max="100" id="book6-quant" value="1"><span id = "title6-price"></span><br><button class="price" id="buyreacher">Lägg i varukorgen</button></div><img src="../Booktrader/jack-reacher.jpg" alt="">
+    </div>
+        <div id="title7-overlay" class="hide">
+                <span class="overlay-close" id="closehedi">X</span>
+            <div id="title7-text"><h2>Frågor jag fått om Förintelsen</h2><h3>Hédi Fried</h3><p>Hédi Fried (född 1924) är författare och psykolog. Hon är djupt engagerad i att arbeta för demokratiska värderingar och mot rasism. Hon utgår i detta arbete från sina egna erfarenheter från Förintelsen. Hon föddes i staden Sighet och kom efter befrielse från koncentrationsläger i Auschwitz till Sverige.</p><br><input type="number" min="1" max="100" id="book7-quant" value="1"><span id = "title7-price"></span><br><button class="price" id="buyhedi">Lägg i varukorgen</button></div><img src="../Booktrader/hedi.jpg" alt="">
+    </div>
+        <div id="title8-overlay" class="hide">
+                <span class="overlay-close" id="closekim">X</span>
+            <div id="title8-text"><h2>Smaker från Vietnam - En familjehemlighet</h2><h3>Kim Thúy</h3><p>I Smaker från Vietnam delar den hyllade författaren Kim Thúy med sig av läckra recept från sitt födelseland Vietnam: färgglada vardagsrätter som är fullpackade med intensiva smakupplevelser. Det bjuds på soppor, sallader, långkok och grillat - men även sötsaker och passande vintips. Hon guidar också bland det som utgör själva kärnan i det vietnamesiska köket: olika sorters risnudlar, fisksåsen, det rika utbudet av färska örter, frukt och grönt.</p><br><input type="number" min="1" max="100" id="book8-quant" value="1"><span id = "title8-price"></span><br><button class="price" id="buykim">Lägg i varukorgen</button></div><img src="../Booktrader/vietnam.jpg" alt="">
+    </div>
+        <div id="title9-overlay" class="hide">
+                <span class="overlay-close" id="closemichelle">X</span>
+            <div id="title9-text"><h2>Becoming</h2><h3>Michelle Obama</h3><p>I sina självutlämnande och fängslande memoarer bjuder Michelle Obama in läsare till sin värld och berättar om de erfarenheter som har format henne som person. Från barndomen i Chicagos South Side genom åren som företagsledaren som kämpade med livspusslet, till tiden på världens kändaste adress. På ett ärligt och insiktsfullt sätt beskriver hon sina med- och motgångar - i det privata och offentliga - och berättar om sitt liv såsom hon har levt det, med sina egna ord och på sina egna villkor.</p><br><input type="number" min="1" max="100" id="book9-quant" value="1"><span id = "title9-price"></span><br><button class="price" id="buyobama">Lägg i varukorgen</button></div><img src="../Booktrader/obama.jpg" alt="">
+    </div>
+        <div id="title10-overlay" class="hide">
+                <span class="overlay-close" id="closeastrid">X</span>
+            <div id="title10-text"><h2>Bröderna Lejonhjärta</h2><h3>Astrid Lindgren</h3><p>Skorpans bror Jonathan har berättat om landet Nangijala, dit man kommer när man dör. För Skorpan är sjuk och ska dö.<br>
+                    "I Nangijala får man vara med om äventyr från morgon till kväll", säger Jonathan. "För det är i Nangijala som alla sagor händer." Några dagar senare brinner det i huset där de bor och Jonathan dör själv. Och tänka sig, precis som Johathan lovat så ses de i Nangijala. Fast allt är inte underbart i sagornas och lägereldarnas land. På andra sidan bergen ligger Törnrosdalen där den onda Tengil tagit makten och gjort folket till slavar.</p><br><input type="number" min="1" max="100" id="book10-quant" value="1"><span id = "title10-price"></span><br><button class="price" id="buylionheart">Lägg i varukorgen</button></div><img src="../Booktrader/lionheart.jpg" alt="">
+    </div>
+        <div id="title11-overlay" class="hide">
+                <span class="overlay-close" id="closejan">X</span>
+            <div id="title11-text"><h2>Lär dig skriva! bokstäver och ord</h2><h3>Jan Magnusson</h3><p>Lär dig skriva! är fylld med roliga och varierade övningar som hjälper små barn att erövra penngrepp och skrivkunnighet. 
+                Efter bokens inledande linjeövningar får barnen lära sig att forma bokstäverna först gemener och sen versaler. Mot slutet av boken får de träna på att skriva ord och korta meningar. </p><br><input type="number" min="1" max="100" id="book11-quant" value="1"><span id = "title11-price"></span><br><button class="price" id="buyjan">Lägg i varukorgen</button></div><img src="../Booktrader/lar-dig-skriva-bokstaver-och-ord.jpg" alt="">
+    </div>
+        <div id="title12-overlay" class="hide">
+                <span class="overlay-close" id="closehiroshi">X</span>
+            <div id="title12-text"><h2>The Art of Fantasy, Sci-fi and Steampunk</h2><h3>Hiroshi Unno</h3><p>"A beautiful visual history book of fantasy art from Romanticism and steampunk to modern illustrations from novels."</p><br><input type="number" min="1" max="100" id="book12-quant" value="1"><span id = "title12-price"></span><br><button class="price" id="buysteam">Lägg i varukorgen</button></div><img src="../Booktrader/the-art-of-fantasy-sci-fi-and-steampunk.jpg" alt="">
+    </div>
+
+
+                                                                                    <!-- BOKTITLAR -->
+
+    <div id="titles-container" class="titles">
+                
+        <div id="title1" class="fantasy books" name="harrypotter"><p><strong>Harry Potter and the Philosopher's Stone</strong><br>JK Rowling<span class="bookprice">90 kr</span><button id="title1-info" class="infobuttons">Läs mer</button></p></div>
+        
+        <div id="title2" class="facts books" name="cosmos"><p><strong>Cosmos</strong><br>Carl Sagan<span class="bookprice">75 kr</span><br><button id="title2-info" class="infobuttons">Läs mer</button><br></p></div>
+        
+        <div id="title3" class="fantasy books" name="ododa"><p><strong>Hanteringen av Odöda</strong><br>John Ajvide Lindqvist<br><span class="bookprice">58 kr</span><button id="title3-info" class="infobuttons">Läs mer</button></p></div>
+        
+        <div id="title4" class="food books" name="cookbook"><p><strong>Italian Cuisine Cookbook</strong><br>Amanda Aldini<span class="bookprice">80 kr</span><br><button id="title4-info" class="infobuttons">Läs mer</button></p></div>
+
+        <div id="title5" class="scifi books" name="robot"><p><strong>I, Robot</strong><br>Isaac Asimov<span class="bookprice">65 kr</span><br><button id="title5-info" class="infobuttons">Läs mer</button></p></div>
+
+        <div id="title6" class="mystery books" name="jack"><p><strong>Jack Reacher</strong><br>Lee Child<span class="bookprice">60 kr</span><br><button id="title6-info" class="infobuttons">Läs mer</button></p></div>
+
+        <div id="title7" class="facts books" name="hedi"><p><strong>Frågor jag fått om Förintelsen</strong><br>Hédi Fried<span class="bookprice">90 kr</span><button id="title7-info" class="infobuttons">Läs mer</button></p></div>
+
+        <div id="title8" class="food books" name="vietnam"><p><strong>Smaker från Vietnam:<br>en familjehemlighet</strong><br>Kim Thúy<span class="bookprice">47 kr</span><button id="title8-info" class="infobuttons">Läs mer</button></p></div>
+
+        <div id="title9" class="facts books" name="obama"><p><strong>Becoming</strong><br>Michelle Obama<span class="bookprice">79 kr</span><button id="title9-info" class="infobuttons">Läs mer</button></p></div>
+
+        <div id="title10" class="kids books" name="lionhearts"><p><strong>Bröderna Lejonhjärta</strong><br>Astrid Lindgren<span class="bookprice">85 kr</span><button id="title10-info" class="infobuttons">Läs mer</button></p></div>
+    
+        <div id="title11" class="kids books" name="letters" value="85"><p><strong>Lär dig skriva! bokstäver och ord</strong><br>Jan Magnusson<span class="bookprice">45 kr</span><button id="title11-info" class="infobuttons">Läs mer</button></p></div>
+    
+        <div id="title12" class="scifi books" name="steampunk" value="85"><p><strong>The Art of Fantasy, Sci-fi and Steampunk</strong><br>Hiroshi Unno<span class="bookprice">95 kr</span><button id="title12-info" class="infobuttons">Läs mer</button></p></div>
+    </div>
+
+    
+</div>
+
+                
+    </main>
+  
+    <footer>
+    
+<p>&COPY; Victor Lindh, 2019</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
